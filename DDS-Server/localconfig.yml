@@ -1,0 +1,35 @@
+DEFAULT:
+ ENVIRONMENT: local
+ HOSTNAME: http://localhost
+ CLAIMS_PATH: /api/claims
+ CLAIM_PATH: /api/claims/:clm_num
+ FEEDBACK_PATH: /api/feedback
+ LOGGING_LEVEL:	1
+DEV:
+ ENVIRONMENT: dev
+ HOSTNAME: 
+ CLAIMS_PATH: /api/claims
+ CLAIM_PATH: /api/claims/:clm_num
+ FEEDBACK_PATH: /api/feedback
+ LOGGING_LEVEL:	1
+QA:
+ ENVIRONMENT: qa
+ HOSTNAME: 
+ CLAIMS_PATH: /api/claims
+ CLAIM_PATH: /api/claims/:clm_num
+ FEEDBACK_PATH: /api/feedback
+ LOGGING_LEVEL:	1
+UAT:
+ ENVIRONMENT: uat
+ HOSTNAME: 
+ CLAIMS_PATH: /api/claims
+ CLAIM_PATH: /api/claims/:clm_num
+ FEEDBACK_PATH: /api/feedback
+ LOGGING_LEVEL: 1
+PROD:
+ ENVIRONMENT: prod
+ HOSTNAME: 
+ CLAIMS_PATH: /api/claims
+ CLAIM_PATH: /api/claims/:clm_num
+ FEEDBACK_PATH: /api/feedback
+ LOGGING_LEVEL: 4

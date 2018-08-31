@@ -1,0 +1,74 @@
+.button {
+  background-color: #43a047 !important;
+  color: #84d188 !important;
+  width: 100%;
+  margin: 0px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.button:hover {
+  background-color: #3b993d !important;
+  color: #fff;
+}
+
+.noButton {
+  background-color: #2b662e !important;
+  color: #a6ada7 !important;
+  width: 100%;
+  margin: 0px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.noButton:hover {
+  background-color: #235d27 !important;
+  color: #fff;
+}
+
+.paper {
+  width: 183px;
+}
+
+.highlighted {
+  border: 4px solid !important;
+  border-color: #4a90e2 !important;
+  border-radius: 8px !important;
+}
+
+.completedCard {
+  opacity: 0.8;
+}
+
+.card {
+  margin: 15px;
+  padding: 4px;
+}
+
+.highlightedCard {
+  margin-top: 7px;
+  padding: 0px;
+}
+
+.image {
+  margin-top:28px !important;
+}
+
+.highlightedImage {
+  margin-top:36px !important;
+}
+
+.predictionText {
+  height:40px;
+  width: 180px;
+  color: #4a4a4a;
+  font-family: Helvetica;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.selected {
+  color: #ffffff !important;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "dds-concurrent-runner",
+  "version": "1.0.0",
+  "scripts": {
+    "installclient": "cd DDS-React && npm install",
+    "installserver": "cd DDS-Server && npm install",
+    "client": "cd DDS-React && npm run start:local",
+    "build:client": "cd DDS-React && npm run build",
+    "server": "cd DDS-Server && npm start",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "build": "concurrently --kill-others-on-fail \"npm run server\" \"npm run build:client\"",
+    "postinstall": "npm run installclient && npm run installserver"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
+}

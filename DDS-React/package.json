@@ -1,0 +1,42 @@
+{
+  "name": "dds-react",
+  "version": "1.0.0",
+  "description": "Disability Decision Support React",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.55",
+    "@material-ui/core": "1.2.1",
+    "@material-ui/icons": "^1.1.0",
+    "axios": "0.18.0",
+    "downshift": "2.0.10",
+    "mli-configuration": "file:.\\mli_dependencies\\mli-configuration-1.0.0.tgz",
+    "mli-logging": "file:.\\mli_dependencies\\mli-logging-1.0.0.tgz",
+    "react": "^16.4.0",
+    "react-d3-speedometer": "^0.3.2",
+    "react-dom": "^16.4.0",
+    "react-infinite-scroller": "1.1.4",
+    "react-progressbar-semicircle": "1.2.1",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.1.4",
+    "redux": "4.0.0",
+    "redux-thunk": "2.2.0"
+  },
+  "scripts": {
+    "start": "node server",
+    "start:local": "react-scripts start",
+    "build": "react-scripts build",
+    "build:dev": "REACT_APP_API_HOST=https://disability-decision-support-server-dev.apps.cac.preview.pcf.manulife.com react-scripts build",
+    "build:uat": "REACT_APP_API_HOST=https://disability-decision-support-server-uat.apps.cac.pcf.manulife.com/ react-scripts build",
+    "build:prod": "REACT_APP_API_HOST=https://disability-decision-support-server.apps.cac.preview.pcf.manulife.com react-scripts build",
+    "postbuild:dev": "npm start",
+    "postbuild:uat": "npm start",
+    "postbuild:prod": "npm start",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "unit-test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "engines": {
+    "node": "9.9.x"
+  },
+  "proxy": "http://localhost:5000/"
+}

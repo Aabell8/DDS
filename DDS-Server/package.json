@@ -1,0 +1,29 @@
+{
+  "name": "dds-server",
+  "version": "1.0.0",
+  "description": "Disability Decision Support Server",
+  "main": "./src/server.js",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "cors": "2.8.4",
+    "express": "4.16.3",
+    "mli-configuration": "file:.\\mli_dependencies\\mli-configuration-1.0.0.tgz",
+    "mli-logging": "file:.\\mli_dependencies\\mli-logging-1.0.0.tgz",
+    "mysql2": "1.5.3",
+    "sequelize": "4.38.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "engines": {
+    "node": "9.9.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.platform.manulife.io/REDLab-Spring-2018/DDS-Server.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
