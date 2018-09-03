@@ -23,6 +23,13 @@ This will trigger server.js which will set up the API routes in routes.js.
       - NODE_ENV={dev/uat/production}
       - PORT={port#}, runs local on specific port
 
+## Setting up database
+
+1. Use the sql script `ddsdb.sql` to dump the test data into the database  
+`mysql -h <host> -u <username> -p dds < ddsdb.sql`
+2. Change the intended database in the server file on like 32 as follows:  
+`let sequelize = new Sequelize("dds", "<username>", "<password>", {`
+
 ## API usage
 
 The API endpoints are as follows:  

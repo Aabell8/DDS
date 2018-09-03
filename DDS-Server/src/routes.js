@@ -12,7 +12,7 @@ const getUniqueClaims = async function(sequelize, res) {
     "SELECT " +
     "t1.id, t1.clm_num, t1.prim_diag_cat, " +
     "t1.predicted_on, t1.wsbsd, t1.top_ip, t1.second_ip, " +
-    "t1.cm_id, t1.cm_name, aId1, aId2 " +
+    "t1.cm_id, t1.cm_name, aId1, Recommendation.aId2 " +
     "FROM Prediction AS t1 " +
     "LEFT OUTER JOIN Prediction AS t2 " +
     "ON t1.clm_num = t2.clm_num " +
@@ -20,7 +20,7 @@ const getUniqueClaims = async function(sequelize, res) {
     "OR (t1.predicted_on = t2.predicted_on AND t1.id < t2.id)) " +
     "LEFT JOIN Recommendation on t1.id = Recommendation.predictionId " +
     "WHERE t2.clm_num IS NULL " +
-    "GROUP BY t1.id " +
+    "GROUP BY t1.id, aId1, aid2 " +
     "ORDER BY t1.predicted_on DESC";
   let claims = [];
   await sequelize
@@ -94,7 +94,8 @@ const getClaimData = function(sequelize, req, res) {
     "LEFT JOIN Action t4 " +
     "ON t2.aId2 = t4.aId " +
     `WHERE t1.clm_num=${clm_num} ` +
-    "GROUP BY id " +
+    "GROUP BY id, t3.pred, t3.val, t4.val, t3.feedback, " +
+    "t4.feedback, t4.pred " + 
     "ORDER BY predicted_on DESC";
   // Claim # in req.query.params.claimNum
   sequelize

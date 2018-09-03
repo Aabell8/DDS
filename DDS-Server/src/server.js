@@ -29,10 +29,10 @@ const setupDatabase = function() {
   // "cf_7b35b16c_5786_42da_8a98_092ab825b7cf?reconnect=true";
 
   const Op = Sequelize.Op;
-  let sequelize = new Sequelize('dds', 'username', 'password', {
-    host: 'localhost',
-    dialect: 'mysql',
-  
+  let sequelize = new Sequelize("dds", "root", "password", {
+    host: "localhost",
+    dialect: "mysql",
+
     pool: {
       max: 5,
       min: 0,
@@ -63,7 +63,7 @@ const setupDatabase = function() {
       apiLogger.Debug("Connection has been established successfully.");
     })
     .catch((err) => {
-      apiLogger.Debug("Unable to connect to the database:", err);
+      apiLogger.Debug(`unable to connect to database: ${err}`);
     });
 
   app.set("sequelizeClient", sequelize);
