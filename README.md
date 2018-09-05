@@ -15,6 +15,15 @@ The app marks claims with new recommendations as NEW and allows the user to filt
 4. Run the React app and server locally:  
 `npm start`
 
+## Setting up database
+
+1. Change directory into DDS-Server:  
+`cd DDS-Server`
+2. Use the sql script `ddsdb.sql` to dump the test data into the database  
+`mysql -h <host> -u <username> -p dds < ddsdb.sql`
+3. Change the intended database in the server file on like 32 as follows:  
+`let sequelize = new Sequelize("dds", "<username>", "<password>", {`
+
 ## Scripts
 
 The scripts are as follows:
